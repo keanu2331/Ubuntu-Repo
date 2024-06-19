@@ -1,0 +1,11 @@
+# Verwende das offizielle httpd (Apache HTTP Server) Image als Basis
+FROM httpd:latest
+
+# Kopiere die editierte index.html in das Image
+COPY index.html /usr/local/apache2/htdocs/
+
+# Setze das Arbeitsverzeichnis
+WORKDIR /usr/local/apache2/htdocs/
+
+# Optional: Expose Port 80 für den Zugriff auf den Apache-Server
+EXPOSE 80
